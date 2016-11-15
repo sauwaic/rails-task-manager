@@ -1,0 +1,15 @@
+<%= form_for(@task) do |t| %>
+  <%= t.label :item %>
+  <%= t.text_field :item %>
+
+  <%= t.label :status %>
+  <%= t.check_box :status %>
+
+  <%= t.label :content %>
+  <%= t.text_field :content %>
+
+  <%= t.label :date %>
+  <%= t.date_field :date %>
+
+  <%= t.submit %>
+<% end %>

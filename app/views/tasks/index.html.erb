@@ -1,0 +1,19 @@
+
+<h1>Here is a list of all your todo's:</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+    <h2><%= link_to "#{task.item}", task_path(task) %> ||
+    <%= task.status ? "Done" : "Not done" %> ||
+    <%= link_to "Edit", edit_task_path(task) %> ||
+    <%= link_to "Delete", task_path(task), method: :delete %>
+    </h2>
+
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a new task", new_task_path %>
+
+
